@@ -7,11 +7,12 @@ import {TiendaArteComponent} from "./tienda-arte/tienda-arte.component";
 import {CarritoComponent} from "./carrito/carrito.component";
 
 const routes: Routes = [
-  {path:'',component:HomeDosComponent},
-  { path: 'detalle-producto', component: DetalleProductoComponent},
+  {path:'',component:LoginComponent},
+  {path: 'home', component: HomeDosComponent},
+  {path: 'detalle-producto', component: DetalleProductoComponent},
   {path: 'login', component: LoginComponent},
-  { path: 'tienda-arte', component: TiendaArteComponent},
-  { path: 'carrito', component: CarritoComponent}
+  {path: 'tienda-arte', component: TiendaArteComponent},
+  {path: 'carrito', component: CarritoComponent}
 ];
 
 @NgModule({
