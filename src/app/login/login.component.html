@@ -1,0 +1,22 @@
+<div class="form-signin w-100 m-auto">
+
+  <div [formGroup]='formSignin'>
+    <img class="mb-4" src="../assets/imagenes/icono.jpg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Ingreso</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" placeholder="nombre@dominio.com" formControlName="email">
+      <label for="email">Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+      <label for="password">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" (click)='ingresar();'>Ingresar</button>
+
+  </div>
+
+  <div *ngIf="mensaje; then thenBlock"></div>
+  <ng-template #thenBlock><p>{{mensaje}}</p></ng-template>
+</div>
