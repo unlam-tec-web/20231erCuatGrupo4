@@ -1,0 +1,52 @@
+{
+    "Productos":[
+    {
+        "Id": "1",
+        "Nombre": "1",
+        "Descripcion": "1",
+        "Clasificacion": "1",
+        "Precio": "1",
+        "ImageUrl": "/imagenes/1.png"
+    },
+    {
+        "Id": "2",
+        "Nombre": "2",
+        "Descripcion": "2",
+        "Clasificacion": "2",
+        "Precio": "2",
+        "ImageUrl": "/imagenes/2.png"
+    },
+    {
+        "Id": "3",
+        "Nombre": "3",
+        "Descripcion": "3",
+        "Clasificacion": "3",
+        "Precio": "3",
+        "ImageUrl": "/imagenes/3.png"
+    },
+    {
+        "Id": "4",
+        "Nombre": "4",
+        "Descripcion": "4",
+        "Clasificacion": "4",
+        "Precio": "4",
+        "ImageUrl": "/imagenes/4.png"
+    },
+    {
+        "Id": "5",
+        "Nombre": "5",
+        "Descripcion": "5",
+        "Clasificacion": "5",
+        "Precio": "5",
+        "ImageUrl": "/imagenes/5.png"
+    },
+    {
+        "Id": "6",
+        "Nombre": "6",
+        "Descripcion": "6",
+        "Clasificacion": "6",
+        "Precio": "6",
+        "ImageUrl": "/imagenes/6.png"
+    }
+    ]
+}
