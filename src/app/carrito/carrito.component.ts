@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, share} from "rxjs";
-import {Imagenes} from "../tienda-arte/imagenes";
+import {Producto} from "../tienda-arte/producto";
 
 
 @Component({
@@ -12,7 +12,7 @@ import {Imagenes} from "../tienda-arte/imagenes";
 
 export class CarritoComponent {
 
-  images: Imagenes[] = [];
+  images: Producto[] = [];
 
   constructor(private http: HttpClient) {
     this.loadImages();
@@ -23,8 +23,10 @@ export class CarritoComponent {
 
   loadImages(): void {
 
-    let res: Observable<Imagenes[]> =
-      this.http.get<Imagenes[]>('https://picsum.photos/v2/list?page=2&limit=9')
+    this.images = JSON.parse(localStorage.getItem('carritoArte') ?? '[]');
+
+    /*let res: Observable<Producto[]> =
+      this.http.get<Producto[]>('https://picsum.photos/v2/list?page=2&limit=9')
         .pipe(share());
     res.subscribe(
       value=> {
@@ -33,7 +35,7 @@ export class CarritoComponent {
       error => {
         console.log('ocurrio un error');
 
-      });
+      });*/
   }
 
 }

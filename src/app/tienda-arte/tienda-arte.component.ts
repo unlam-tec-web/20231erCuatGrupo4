@@ -2,11 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Router} from "@angular/router";
 import {Observable, share} from "rxjs";
-import {Imagenes} from "./imagenes";
+import {Producto} from "./producto";
 
-interface Image {
-  url: string;
-}
 
 @Component({
   selector: 'app-tienda-arte',
@@ -15,7 +12,7 @@ interface Image {
 })
 
 export class TiendaArteComponent implements OnInit{
-  images: Imagenes[] = [];
+  productos: Producto[] = [];
 
   constructor(private http: HttpClient) {
     this.loadImages();
@@ -28,12 +25,13 @@ export class TiendaArteComponent implements OnInit{
 
     //por ahora se cargan de un sitio random.
     //Aca deberia irlas a buscar a la base supongo consumiento nuestra API
-    let res: Observable<Imagenes[]> =
-      this.http.get<Imagenes[]>('https://picsum.photos/v2/list?page=2&limit=9')
+    let res: Observable<Producto[]> =
+      this.http.get<Producto[]>('../assets/productos.json')
         .pipe(share());
     res.subscribe(
       value=> {
-        this.images = value;
+        console.log(value);
+        this.productos = value;
       },
       error => {
         console.log('ocurrio un error');
@@ -41,8 +39,22 @@ export class TiendaArteComponent implements OnInit{
       });
   }
 
-  addToCart(image: Image): void {
-    // Agregar lógica para agregar la imagen al carrito
-    console.log('Imagen agregada al carrito:', image);
+  addToCart(imagen: Producto): void {
+
+    const productosCarrito: Producto[] = JSON.parse(localStorage.getItem('carritoArte') ?? '[]');
+
+    if (productosCarrito.some(Producto => Producto.Id === imagen.Id)) {
+      console.log('El producto ya existe en el array');
+    } else {
+      productosCarrito.push(imagen);
+    }
+
+    localStorage.setItem('carritoArte', JSON.stringify(productosCarrito));
+
+    console.log('Imagen agregada al carrito:', imagen);
+
   }
+
+
+
 }
