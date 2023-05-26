@@ -8,13 +8,14 @@
   background-color: white;
   border-radius: 5px;
   padding: 10px;
-
 }
-.imagenpr{margin-top: 10px;
+.imagenpr {
+  margin-top: 10px;
   padding: 0px;
-
 }
-.precio{font-size: 32px;}
+.precio {
+  font-size: 32px;
+}
 
 .nombreclaseimagen {
   max-height: 100%;
@@ -68,8 +69,8 @@
 .comprar2 {
   margin-top: 20px;
   width: 180px;
-  background-color: #C8DFF8;
-  color:#3483fa;
+  background-color: #c8dff8;
+  color: #3483fa;
 
   padding: 12px 24px;
   border: none;
@@ -79,16 +80,17 @@
 }
 
 .comprar2:hover {
-  background-color: #1873D6;
+  background-color: #1873d6;
   color: white;
 }
 
-
 .comprar:hover {
-  background-color: #1873D6;
+  background-color: #1873d6;
 }
-.titulodescripcion{font-size: 30px;
-font-weight: bold;}
-.descripcionarte{font-size: 20px;}
-
-
+.titulodescripcion {
+  font-size: 30px;
+  font-weight: bold;
+}
+.descripcionarte {
+  font-size: 20px;
+}
