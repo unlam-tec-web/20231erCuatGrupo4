@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit{
   ingresar(){
     if (this.formSignin.get('email')?.value == "usuario@test.com")
     {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/tienda-arte'])
     }else {
       this.mensaje = "Acceso Invalido";
     }

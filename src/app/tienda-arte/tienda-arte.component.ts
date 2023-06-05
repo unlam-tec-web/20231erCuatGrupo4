@@ -45,8 +45,10 @@ export class TiendaArteComponent implements OnInit{
 
     if (productosCarrito.some(Producto => Producto.Id === imagen.Id)) {
       console.log('El producto ya existe en el array');
+      alert('el producto ya esta en el carrito');
     } else {
       productosCarrito.push(imagen);
+      alert('se agrego el producto al carrito');
     }
 
     localStorage.setItem('carritoArte', JSON.stringify(productosCarrito));
