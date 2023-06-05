@@ -10,16 +10,16 @@
 <div class="fondo">
   <div class="contenido">
     <div class="imagenpr">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/starry-night-over-the-rhone-by-vincent-willem-van-gogh-news-photo-1658241462.jpg" class="nombreclaseimagen">
+      <img  [src]="imageUrl" alt="Imagen del producto" class="nombreclaseimagen">
     </div>
     <div class="descripcion">
       <div class="titulo">
-        <h1>Cuadro Van Gogh</h1>
+        <h1>{{nombre}}</h1>
       </div>
-      <div class="precio">1500000$</div>
+      <div class="precio">{{precio}}</div>
 
       <div>
-        <button class="comprar">Comprar</button>
+
       </div>
       <div>
         <button class="comprar2">Agregar al carrito</button>
@@ -32,7 +32,7 @@
       Informacion del Cuadro<br>
   </div>
      <br><div class="descripcionarte">
-    <p>  Pintado en 1888 actualmente se encuentra en el Museo de Orsay de París. Representa Arles de noche a la orilla del río, cerca de la casa amarilla en la que vivía en ese momento.
+    <p> {{descripcion}}
 
     </p></div>
   </div>
