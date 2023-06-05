@@ -10,7 +10,7 @@ import { CrearProductoComponent } from './crear-producto/crear-producto.componen
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeDosComponent },
-  { path: 'detalle-producto/:nombre/:precio/:imageUrl/:descripcion', component: DetalleProductoComponent },
+  { path: 'detalle-producto/:id', component: DetalleProductoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tienda-arte', component: TiendaArteComponent },
   { path: 'carrito', component: CarritoComponent },

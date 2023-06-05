@@ -7,19 +7,19 @@
 
 </head>
 <body>
-<div class="fondo">
+<div class="fondo" ><ng-container *ngFor="let imagen of productos"><li *ngIf="imagen.Id===id.toString()">
   <div class="contenido">
     <div class="imagenpr">
-      <img  [src]="imageUrl" alt="Imagen del producto" class="nombreclaseimagen">
+      <img [src]="imagen.ImageUrl" class="nombreclaseimagen">
     </div>
     <div class="descripcion">
       <div class="titulo">
-        <h1>{{nombre}}</h1>
+        <h1>Cuadro Van Gogh</h1>
       </div>
-      <div class="precio">{{precio}}</div>
+      <div class="precio">{{imagen.Precio}}</div>
 
       <div>
-
+        <button class="comprar">Comprar</button>
       </div>
       <div>
         <button class="comprar2">Agregar al carrito</button>
@@ -32,10 +32,10 @@
       Informacion del Cuadro<br>
   </div>
      <br><div class="descripcionarte">
-    <p> {{descripcion}}
+    <p>{{imagen.Descripcion}}
 
     </p></div>
-  </div>
+  </div>  </li></ng-container>
 </div>
 <header>
 </header>
