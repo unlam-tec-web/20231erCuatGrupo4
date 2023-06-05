@@ -14,15 +14,13 @@
     </div>
     <div class="descripcion">
       <div class="titulo">
-        <h1>Cuadro Van Gogh</h1>
+        <h1>{{imagen.Nombre}}</h1>
       </div>
-      <div class="precio">{{imagen.Precio}}</div>
+      <div class="precio">{{imagen.Precio}}$</div>
+
 
       <div>
-        <button class="comprar">Comprar</button>
-      </div>
-      <div>
-        <button class="comprar2">Agregar al carrito</button>
+        <button class="comprar2"(click)="addToCart(imagen)">Agregar al carrito</button>
       </div>
     </div>
   </div>
