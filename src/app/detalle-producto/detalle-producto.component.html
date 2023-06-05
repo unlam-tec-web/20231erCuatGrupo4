@@ -7,22 +7,20 @@
 
 </head>
 <body>
-<div class="fondo">
+<div class="fondo" ><ng-container *ngFor="let imagen of productos"><li *ngIf="imagen.Id===id.toString()">
   <div class="contenido">
     <div class="imagenpr">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/starry-night-over-the-rhone-by-vincent-willem-van-gogh-news-photo-1658241462.jpg" class="nombreclaseimagen">
+      <img [src]="imagen.ImageUrl" class="nombreclaseimagen">
     </div>
     <div class="descripcion">
       <div class="titulo">
-        <h1>Cuadro Van Gogh</h1>
+        <h1>{{imagen.Nombre}}</h1>
       </div>
-      <div class="precio">1500000$</div>
+      <div class="precio">{{imagen.Precio}}$</div>
+
 
       <div>
-        <button class="comprar">Comprar</button>
-      </div>
-      <div>
-        <button class="comprar2">Agregar al carrito</button>
+        <button class="comprar2"(click)="addToCart(imagen)">Agregar al carrito</button>
       </div>
     </div>
   </div>
@@ -32,10 +30,10 @@
       Informacion del Cuadro<br>
   </div>
      <br><div class="descripcionarte">
-    <p>  Pintado en 1888 actualmente se encuentra en el Museo de Orsay de París. Representa Arles de noche a la orilla del río, cerca de la casa amarilla en la que vivía en ese momento.
+    <p>{{imagen.Descripcion}}
 
     </p></div>
-  </div>
+  </div>  </li></ng-container>
 </div>
 <header>
 </header>
