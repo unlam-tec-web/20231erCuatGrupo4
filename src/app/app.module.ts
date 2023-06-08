@@ -5,21 +5,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
-import { HomeDosComponent } from './home-dos/home-dos.component';
 import { LoginComponent } from './login/login.component';
 import { TiendaArteComponent } from './tienda-arte/tienda-arte.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CrearProductoModule } from './crear-producto/crear-producto.module';
+import { NavbarProductosComponent } from './navbar-productos/navbar-productos.component';
 @NgModule({
   declarations: [
     AppComponent,
     DetalleProductoComponent,
-    HomeDosComponent,
     LoginComponent,
     TiendaArteComponent,
     CarritoComponent,
     RegistroComponent,
+    NavbarProductosComponent,
   ],
   imports: [
     BrowserModule,

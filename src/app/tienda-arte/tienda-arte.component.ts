@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Router} from "@angular/router";
 import {Observable, share} from "rxjs";
-import {Producto} from "./producto";
+import {Producto} from "../modelos/producto";
+import {ServicioStorage} from "../servicios/servicioStorage";
+import {ServicioProductos} from "../servicios/servicioProductos";
 
 
 @Component({
@@ -14,7 +16,7 @@ import {Producto} from "./producto";
 export class TiendaArteComponent implements OnInit{
   productos: Producto[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private servicioStorage: ServicioStorage, private servicioProductos: ServicioProductos) {
     this.loadImages();
   }
 
@@ -23,37 +25,24 @@ export class TiendaArteComponent implements OnInit{
 
   loadImages(): void {
 
-    //por ahora se cargan de un sitio random.
-    //Aca deberia irlas a buscar a la base supongo consumiento nuestra API
-    let res: Observable<Producto[]> =
-      this.http.get<Producto[]>('../assets/productos.json')
+    let respuesta: Observable<Producto[]> = this.servicioProductos.getTodosLosProducts()
         .pipe(share());
-    res.subscribe(
+    respuesta.subscribe(
       value=> {
         console.log(value);
         this.productos = value;
       },
       error => {
         console.log('ocurrio un error');
-
       });
   }
 
   addToCart(imagen: Producto): void {
 
-    const productosCarrito: Producto[] = JSON.parse(localStorage.getItem('carritoArte') ?? '[]');
+    this.servicioStorage.agregarProductoAlCarrito(imagen)
 
-    if (productosCarrito.some(Producto => Producto.Id === imagen.Id)) {
-      console.log('El producto ya existe en el array');
-      alert('el producto ya esta en el carrito');
-    } else {
-      productosCarrito.push(imagen);
-      alert('se agrego el producto al carrito');
-    }
+    console.log('Producto agregado al carrito:', imagen);
 
-    localStorage.setItem('carritoArte', JSON.stringify(productosCarrito));
-
-    console.log('Imagen agregada al carrito:', imagen);
 
   }
 
