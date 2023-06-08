@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, share} from "rxjs";
-import {Producto} from "../tienda-arte/producto";
+import {Producto} from "../modelos/producto";
 import {Router} from "@angular/router";
+import {ServicioStorage} from "../servicios/servicioStorage";
 
 
 @Component({
@@ -15,7 +16,7 @@ export class CarritoComponent {
 
   images: Producto[] = [];
 
-  constructor(private http: HttpClient, protected router:Router) {
+  constructor(private http: HttpClient, protected router:Router, private servicioStorage: ServicioStorage) {
     this.loadImages();
   }
 
@@ -24,7 +25,7 @@ export class CarritoComponent {
 
   loadImages(): void {
 
-    this.images = JSON.parse(localStorage.getItem('carritoArte') ?? '[]');
+    this.images = this.servicioStorage.getTodosLosProductosDelCarrito();
 
   }
 
@@ -39,10 +40,10 @@ export class CarritoComponent {
 
   deletItem(id: string){
 
-    
     this.images = this.images.filter(  image => image.Id != id);
-    localStorage.setItem('carritoArte', JSON.stringify(this.images));
-    
+
+    this.servicioStorage.actualizarCarrito(this.images);
+
     /* const index = products.findIndex(product => product.product_id === productId);
 
     if (index > -1) {
