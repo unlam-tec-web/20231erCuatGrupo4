@@ -43,7 +43,6 @@ export class TiendaArteComponent implements OnInit{
 
     console.log('Producto agregado al carrito:', imagen);
 
-
   }
 
 

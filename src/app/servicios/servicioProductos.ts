@@ -10,7 +10,7 @@ export class ServicioProductos {
   constructor(private httpCliente: HttpClient) {}
 
   getTodosLosProducts(){
-    return this.httpCliente.get<Producto[]>('../assets/productos.json')
+    return this.httpCliente.get<Producto[]>('http://localhost:3000/getImagenes')
   }
 
 }
