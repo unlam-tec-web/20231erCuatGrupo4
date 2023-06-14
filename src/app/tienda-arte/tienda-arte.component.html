@@ -1,19 +1,19 @@
 <div class="container">
-   <div class="row">
-     <img  src="assets/imagenes/test-banner.jpg" alt="Banner Image">
+  <div class="row">
+    <img  src="assets/imagenes/banner2.png" alt="Banner Image">
 
-   </div>
+  </div>
   <br>
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let imagen of productos">
       <div class="card">
         <a [routerLink]="['/detalle-producto',imagen.Id]">
-          <img [src]="imagen.ImageUrl" class="card-img-top" alt="Random Image">
+          <img [src]="'http://localhost:3000/' + imagen.ImageUrl" class="card-img-top" alt="Random Image">
         </a>
         <div class="card-body">
           <h5 class="card-title">Autor: {{imagen.Nombre}}</h5>
-          <h5 class="card-title">Precio: {{imagen.Precio}} $</h5>
-          <h5 class="card-title">#Arte #IA #Random</h5>
+          <h5 class="card-text">Precio: {{imagen.Precio}} $</h5>
+          <h5 class="card-footer">#Arte #IA #Random</h5>
           <button class="btn btn-primary" (click)="addToCart(imagen)">Agregar al carrito</button>
         </div>
       </div>
