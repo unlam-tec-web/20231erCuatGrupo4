@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const cors = require("cors");
 const os = require('os');
+const servidorMail = require('../helpers/mailer');
 
 const app = express();
 
@@ -48,17 +49,16 @@ app.get('/getImagenPorId', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
+
+app.post('/registrar', (req, res) => {
+  servidorMail.enviarMailValidacionDeMail().then((mensaje) => { res.send(mensaje)});
+});
+
+app.get('/verificar', (req, res) => {
+  res.send("Mail Verificado");
 });
 
 
-
-
-
-
-
-
-
-
-
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!')
+});
