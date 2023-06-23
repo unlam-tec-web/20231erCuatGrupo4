@@ -15,17 +15,11 @@ let logger = (req, res, next) => {
   next();
 }
 
-let showIP = (req, res, next) => {
-  console.log('IP: 127.0.0.1');
-  next();
-};
-
 
 //Define middlewares
 app.use(express.json());
 app.use(cors());
 app.use(logger);
-app.use(showIP);
 app.use(express.static('../datos'));
 
 
