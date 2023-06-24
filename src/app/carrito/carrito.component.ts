@@ -45,7 +45,6 @@ export class CarritoComponent {
     this.servicioStorage.actualizarCarrito(this.images);
 
     /* const index = products.findIndex(product => product.product_id === productId);
-
     if (index > -1) {
         products.splice(index, 1);
     } */
