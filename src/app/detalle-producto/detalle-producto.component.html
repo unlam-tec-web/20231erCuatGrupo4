@@ -10,7 +10,7 @@
 <div class="fondo" ><ng-container *ngFor="let imagen of productos"><li *ngIf="imagen.Id===id.toString()">
   <div class="contenido">
     <div class="imagenpr">
-      <img [src]="'http://localhost:3000/' + imagen.ImageUrl"  class="nombreclaseimagen">
+      <img [src]="'http://localhost:3000/'+imagen.ImageUrl" class="nombreclaseimagen">
     </div>
     <div class="descripcion">
       <div class="titulo">
