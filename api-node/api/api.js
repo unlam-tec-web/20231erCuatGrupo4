@@ -72,13 +72,12 @@ app.post('/registrar', (req, res) => {
     if (err) {
       console.log(err);
       res.json(err);
+      res.json({'resp':`${cognitoUser.getUsername()}`})
       return;
     }
     cognitoUser = result.user;
     console.log('user name is ' + cognitoUser.getUsername());
-    res.json({
-      bienvenido: `${cognitoUser.getUsername()}`
-    })
+    res.json({'resp':'OK'})
   });
 
 });

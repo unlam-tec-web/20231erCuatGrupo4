@@ -16,7 +16,7 @@
     <button class="w-100 btn btn-lg btn-primary" (click)='ingresar();'>Ingresar</button>
 
   </div>
-
+  <a routerLink="/registro">Registrarme</a>
   <div *ngIf="mensaje; then thenBlock"></div>
   <ng-template #thenBlock><p>{{mensaje}}</p></ng-template>
 </div>
