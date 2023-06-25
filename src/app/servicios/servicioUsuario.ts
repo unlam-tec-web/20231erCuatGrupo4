@@ -14,6 +14,12 @@ export class ServicioUsuario {
   login(usuario: { password: string; username: string }){
 
     return this.httpCliente.post<Respuesta>('http://localhost:3000/login',usuario);
+
   }
 
+  registrar(usuario: { password: string; email: string; username: string }) {
+
+    return this.httpCliente.post<Respuesta>('http://localhost:3000/registrar',usuario);
+
+  }
 }
