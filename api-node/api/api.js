@@ -83,7 +83,7 @@ router.post('/login', (req, res) => {
     },
     onFailure: function(err) {
 
-      console.log(err);
+      console.log(err.code);
       switch (err.code) {
 
         case "UserNotConfirmedException":
