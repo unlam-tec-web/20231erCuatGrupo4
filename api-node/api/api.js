@@ -1,7 +1,7 @@
-const express = require('express');
-const fs = require('fs');
-const cors = require("cors");
-const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
+import express from 'express';
+import fs from 'fs';
+import AmazonCognitoIdentity from 'amazon-cognito-identity-js';
+
 const CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
 
 
@@ -12,37 +12,20 @@ const poolData = {
 };
 const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
-
-
-const app = express();
-
-let isLogin = () => false;
-
-let logger = (req, res, next) => {
-  console.log('Peticion de tipo: ', req.method );
-  next();
-}
-
-
-
-//Define middlewares
-app.use(express.json());
-app.use(cors());
-app.use(logger);
-app.use(express.static('../datos'));
+const router = express.Router();
 
 
 //Definir Endpoints
 
-app.get('/getImagenes', (req, res) => {
-  fs.readFile('../datos/productos.json', (err, data) => {
+router.get('/getImagenes', (req, res) => {
+  fs.readFile('./datos/productos.json', (err, data) => {
     res.send(JSON.parse(data));
   });
 });
 
-app.get('/getImagenPorId', (req, res) => {
+router.get('/getImagenPorId', (req, res) => {
 
-  fs.readFile('../datos/productos.json', (err, data) => {
+  fs.readFile('./datos/productos.json', (err, data) => {
 
     const productos = JSON.parse(data);
     const producto = productos.find(p => p.Id === req.body.IdImagen)
@@ -51,9 +34,7 @@ app.get('/getImagenPorId', (req, res) => {
   });
 });
 
-
-
-app.post('/registrar', (req, res) => {
+router.post('/registrar', (req, res) => {
   console.log("JSON:" + JSON.stringify(req.body));
 
   var attributeList = [];
@@ -72,23 +53,15 @@ app.post('/registrar', (req, res) => {
     if (err) {
       console.log(err);
       res.json(err);
-      res.json({'resp':`${cognitoUser.getUsername()}`})
+      res.json({'resp':`${err}`})
       return;
     }
-    cognitoUser = result.user;
-    console.log('user name is ' + cognitoUser.getUsername());
     res.json({'resp':'OK'})
   });
 
 });
 
-
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-});
-
-
-app.post('/login', (req, res) => {
+router.post('/login', (req, res) => {
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails({
     Username : req.body.username,
     Password : req.body.password,
@@ -109,9 +82,27 @@ app.post('/login', (req, res) => {
       res.json({'resp':'OK'})
     },
     onFailure: function(err) {
+
       console.log(err);
-      res.json({'resp':'Credenciales Incorrectas'})
+      switch (err.code) {
+
+        case "UserNotConfirmedException":
+          console.log("El usuario aún no ha confirmado su correo electrónico.");
+          res.json({ 'resp': "Aún no ha confirmado su correo electrónico." });
+          break;
+        case "NotAuthorizedException":
+          console.log("Credenciales inválidas.");
+          res.json({ 'resp': "Credenciales inválidas." });
+          break;
+
+        default:
+          console.log("Se produjo un error al intentar iniciar sesión:", err);
+          res.json({ 'resp': err });
+      }
+
     },
 
   });
 });
+
+export default router;
