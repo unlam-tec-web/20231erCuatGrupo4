@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #fafafa;
+}
+
+label > span {
+  margin-right: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  color: #fafafa;
+}
+
+button {
+  margin-top: 20px;
+}
+#fileName {
+  color: #fafafa;
+}
+#fileError {
+  color: #ff0000;
+}

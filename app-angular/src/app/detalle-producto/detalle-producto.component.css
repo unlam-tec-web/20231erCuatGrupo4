@@ -1,0 +1,96 @@
+.contenido {
+  font-family: "Calibri";
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  border: 0.5px solid gainsboro;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.imagenpr {
+  margin-top: 10px;
+  padding: 0px;
+}
+.precio {
+  font-size: 32px;
+}
+
+.nombreclaseimagen {
+  max-height: 100%;
+  max-width: 500px;
+  align-items: center;
+  width: auto;
+}
+
+.descripcion {
+  padding: 0px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+  flex: 1;
+
+  text-align: center;
+}
+
+.contenido2 {
+  border: 0.5px solid gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  justify-items: center;
+  width: 900px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.comprar {
+  margin-top: 20px;
+  width: 180px;
+  background-color: #3483fa;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comprar2 {
+  margin-top: 20px;
+  width: 180px;
+  background-color: #c8dff8;
+  color: #3483fa;
+
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comprar2:hover {
+  background-color: #1873d6;
+  color: white;
+}
+
+.comprar:hover {
+  background-color: #1873d6;
+}
+.titulodescripcion {
+  font-size: 30px;
+  font-weight: bold;
+}
+.descripcionarte {
+  font-size: 20px;
+}

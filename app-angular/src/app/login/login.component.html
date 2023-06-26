@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="body">
+
+    <div [formGroup]='formSignin'>
+      <img class="logo" src="../assets/imagenes/login.png" alt="img login">
+
+      <h3 class="mb-2">Ingreso</h3>
+
+      <div class="form-floating mb-3 mt-3">
+        <input type="email" class="form-control" id="email" formControlName="email" autocomplete="false"
+               placeholder="nombre@dominio.com">
+        <label for="email">Email</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" formControlName="password" autocomplete="false"
+               placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary btn-lg" (click)="ingresar()">Aceptar</button>
+      </div>
+
+    </div>
+
+    <p class="mt-3">No tengo cuenta. <a routerLink="/registro">Quiero Registrarme</a></p>
+
+    <div *ngIf="mensaje; then thenBlock"></div>
+    <ng-template #thenBlock><p>{{mensaje}}</p></ng-template>
+  </div>
+</div>
