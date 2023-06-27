@@ -1,12 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators, FormControl, AbstractControl} from '@angular/forms';
 import {Observable, share} from "rxjs";
-import {Usuario} from "../modelos/usuario";
 import {ServicioUsuario} from "../servicios/servicioUsuario";
 import {Respuesta} from "../modelos/respuesta";
-import {ToastrService} from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-login',
@@ -14,24 +13,43 @@ import {ToastrService} from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  formSignin: FormGroup = new FormGroup(
+    {
+      email: new FormControl(''),
+      password: new FormControl(''),
 
-  formSignin: FormGroup;
+    }
+  );
+  submitted = false;
   mensaje: string;
 
   constructor(protected router: Router, protected httpClient: HttpClient,
-              private formBuilder: FormBuilder, private servicioUsuario: ServicioUsuario,
-              private toastr: ToastrService) {
+              private formBuilder: FormBuilder, private servicioUsuario: ServicioUsuario) {
     this.mensaje = "";
   }
 
   ngOnInit(): void {
+
     this.formSignin = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
     });
   }
 
+  get f(): { [key: string]: AbstractControl } {
+    return this.formSignin.controls;
+  }
+
   ingresar() {
+
+    this.submitted = true;
+
+    if (this.formSignin.invalid) {
+      Object.values(this.formSignin.controls).forEach(control => {
+        control.markAsTouched();
+      });
+      return;
+    }
 
     const usuario =
       {
@@ -54,7 +72,7 @@ export class LoginComponent implements OnInit {
 
       },
       error => {
-        console.log('Error al leer los usuarios');
+        this.mensaje = 'Error al leer los usuarios';
 
       });
   }
