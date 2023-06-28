@@ -22,4 +22,11 @@ export class ServicioUsuario {
     return this.httpCliente.post<Respuesta>('http://localhost:3000/registrar',usuario);
 
   }
+
+  estaLogueado() {
+    let tokenUser = localStorage.getItem('tokenUsuario') ?? "";
+
+    return (tokenUser != "");
+  }
+
 }

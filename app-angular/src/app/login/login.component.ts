@@ -64,7 +64,11 @@ export class LoginComponent implements OnInit {
         console.log(value);
 
         if (value.resp == "OK") {
+
+          localStorage.setItem('tokenUsuario', value.token);
+
           this.router.navigate(['/tienda-arte'])
+
         } else {
 
           this.mensaje = value.resp;

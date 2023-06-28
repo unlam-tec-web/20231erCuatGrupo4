@@ -28,5 +28,7 @@ export class ServicioStorage {
 
   getCantidadProductosEnCarrito = (): string => this.getTodosLosProductosDelCarrito().length.toString();
 
+  eliminarCarritoTemporal = (): void => localStorage.removeItem('carritoArte');
+
 }
 
