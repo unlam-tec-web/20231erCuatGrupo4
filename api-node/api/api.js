@@ -79,7 +79,7 @@ router.post('/login', (req, res) => {
       console.log('access token + ' + result.getAccessToken().getJwtToken());
       console.log('id token + ' + result.getIdToken().getJwtToken());
       console.log('refresh token + ' + result.getRefreshToken().getToken());
-      res.json({'resp':'OK'})
+      res.json({'resp':'OK', 'token': result.getAccessToken().getJwtToken()})
     },
     onFailure: function(err) {
 

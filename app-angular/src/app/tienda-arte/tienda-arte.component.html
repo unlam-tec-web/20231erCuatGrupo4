@@ -8,7 +8,7 @@
     <div class="col-md-4 mb-4" *ngFor="let imagen of productos">
       <div class="card">
         <a [routerLink]="['/detalle-producto',imagen.Id]">
-          <img [src]="'http://localhost:3000/' + imagen.ImageUrl" class="card-img-top" alt="Random Image">
+          <img [src]="'http://localhost:3000/' + imagen.ImageUrl" class="card-img-top" alt="Random Image" style="height: 40vh">
         </a>
         <div class="card-body">
           <h5 class="card-title">Autor: {{imagen.Nombre}}</h5>
