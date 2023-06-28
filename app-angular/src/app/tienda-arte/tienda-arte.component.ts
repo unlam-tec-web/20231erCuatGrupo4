@@ -5,6 +5,7 @@ import {Observable, share} from "rxjs";
 import {Producto} from "../modelos/producto";
 import {ServicioStorage} from "../servicios/servicioStorage";
 import {ServicioProductos} from "../servicios/servicioProductos";
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -16,11 +17,13 @@ import {ServicioProductos} from "../servicios/servicioProductos";
 export class TiendaArteComponent implements OnInit{
   productos: Producto[] = [];
 
-  constructor(private http: HttpClient, private servicioStorage: ServicioStorage, private servicioProductos: ServicioProductos) {
+  constructor(private http: HttpClient, private servicioStorage: ServicioStorage,
+              private servicioProductos: ServicioProductos,private toastr: ToastrService) {
     this.loadImages();
   }
 
   ngOnInit(): void {
+
   }
 
   loadImages(): void {
@@ -29,8 +32,10 @@ export class TiendaArteComponent implements OnInit{
         .pipe(share());
     respuesta.subscribe(
       value=> {
-        console.log(value);
+
         this.productos = value;
+
+        this.actualizarEstado();
       },
       error => {
         console.log('ocurrio un error');
@@ -39,10 +44,28 @@ export class TiendaArteComponent implements OnInit{
 
   addToCart(imagen: Producto): void {
 
+    imagen.EnCarrito=true;
+
     this.servicioStorage.agregarProductoAlCarrito(imagen)
 
-    console.log('Producto agregado al carrito:', imagen);
+    this.toastr.info('Producto agregado al Carrito','', {
+      positionClass: 'toast-top-right',
+      closeButton: true,
+      progressBar: true,
+      timeOut: 2000,
+      tapToDismiss: false
+    });
 
+  }
+
+  actualizarEstado(){
+
+    const carrito = this.servicioStorage.getTodosLosProductosDelCarrito();
+
+    for(const producto of this.productos)
+    {
+      producto.EnCarrito = carrito.some(item => item.Id == producto.Id);
+    }
   }
 
 

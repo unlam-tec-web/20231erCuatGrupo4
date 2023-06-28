@@ -11,10 +11,18 @@
           <img [src]="'http://localhost:3000/' + imagen.ImageUrl" class="card-img-top" alt="Random Image" style="height: 40vh">
         </a>
         <div class="card-body">
-          <h5 class="card-title">Autor: {{imagen.Nombre}}</h5>
-          <h5 class="card-text">Precio: {{imagen.Precio}} $</h5>
-          <h5 class="card-footer">#Arte #IA #Random</h5>
-          <button class="btn btn-primary" (click)="addToCart(imagen)">Agregar al carrito</button>
+          <div *ngIf="!imagen.EnCarrito; then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>
+            <h5 class="card-title">Autor: {{imagen.Nombre}}</h5>
+            <h5 class="card-text">Precio: {{imagen.Precio}} $</h5>
+            <h5 class="card-footer">#Arte #IA #Random</h5>
+          </ng-template>
+          <ng-template #elseBlock>
+            <h5 class="card-title">Autor: {{imagen.Nombre}}</h5>
+            <h5 class="card-text">Sin Stock</h5>
+            <h5 class="card-footer">#Arte #IA #Random</h5>
+          </ng-template>
+          <button class="btn btn-primary" [disabled]="imagen.EnCarrito" (click)="addToCart(imagen)">Agregar al carrito</button>
         </div>
       </div>
     </div>

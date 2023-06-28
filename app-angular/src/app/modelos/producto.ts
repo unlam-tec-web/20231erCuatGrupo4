@@ -5,4 +5,5 @@ export interface Producto {
   Clasificacion: string;
   Precio: string;
   ImageUrl: string;
+  EnCarrito: boolean;
 }

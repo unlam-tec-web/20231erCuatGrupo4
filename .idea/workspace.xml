@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="828cf012-5b36-4833-a68f-8a9e3777c5bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/app/modelos/producto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/modelos/producto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app-angular/src/app/navbar-productos/navbar-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/navbar-productos/navbar-productos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/app/servicios/servicioStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/servicios/servicioStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,21 +33,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Unlam/tw2/20231erCuatGrupo4/app-angular/src/app/servicios",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UNLAM/tw2/tp/20231erCuatGrupo4/api-node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Unlam\tw2\20231erCuatGrupo4\app-angular\src\app\servicios" />
       <recent name="D:\UNLAM\tw2\tp\20231erCuatGrupo4\api-node" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="20231erCuatGrupo4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="20231erCuatGrupo4" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,7 +79,7 @@
       <workItem from="1687810634558" duration="86000" />
       <workItem from="1687810778919" duration="1092000" />
       <workItem from="1687811893319" duration="10226000" />
-      <workItem from="1687839062384" duration="11176000" />
+      <workItem from="1687822504890" duration="14058000" />
     </task>
     <servers />
   </component>
