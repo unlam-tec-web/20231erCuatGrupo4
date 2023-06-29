@@ -77,7 +77,7 @@ router.post('/grabarCompra', (req, res) => {
 
     console.log(req.body);
 
-    res.send({'resp': 'OK'})
+    res.send({'resp': 'Gracias por su compra'})
 
 })
 
