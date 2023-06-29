@@ -69,7 +69,7 @@ export class RegistroComponent implements OnInit {
             tapToDismiss: false
           });
 
-          this.router.navigate(['/login'])
+          this.router.navigate(['/tienda-arte'])
 
         } else {
 

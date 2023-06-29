@@ -1,6 +1,8 @@
 import express from 'express';
 import fs from 'fs';
 import AmazonCognitoIdentity from 'amazon-cognito-identity-js';
+import multer from 'multer';
+import lodash from 'lodash';
 
 const CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
 
@@ -15,7 +17,70 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 const router = express.Router();
 
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null,'./datos/imagenes/')
+  },
+  filename: (req, file, cb) => {
+    const extension = file.originalname.split('.').pop()
+    cb(null,`${Date.now()}.${extension}`)
+  }
+})
+
+const upload = multer({storage});
+
 //Definir Endpoints
+
+router.post('/generarNuevoProducto',upload.single('imagen'),(req, res) => {
+
+  fs.readFile('./datos/productos.json', (err, data) => {
+
+    if (err) {
+      console.error(err);
+      res.error(500).send({'resp': 'Error al Grabar'});
+      return ;
+    }
+
+    const productos = JSON.parse(data);
+
+    const nuevoId = productos.length > 0
+                     ? parseInt(lodash.maxBy(productos,'Id').Id) + 1 : 1;
+
+    const nuevoProducto = {
+      Id: nuevoId.toString(),
+      Nombre: req.body.nombre,
+      Descripcion: req.body.descripcion,
+      Precio: req.body.precio,
+      ImageUrl: 'imagenes/' + req.file.filename,
+    };
+
+    productos.push(nuevoProducto);
+
+    console.log(productos);
+
+    const jsonString = JSON.stringify(productos);
+
+    fs.writeFile('./datos/productos.json', jsonString, (err) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+    });
+
+    res.send({'resp': 'OK'})
+  });
+
+})
+
+
+router.post('/grabarCompra', (req, res) => {
+
+    console.log(req.body);
+
+    res.send({'resp': 'OK'})
+
+})
+
 
 router.get('/getImagenes', (req, res) => {
   fs.readFile('./datos/productos.json', (err, data) => {
@@ -99,9 +164,7 @@ router.post('/login', (req, res) => {
           console.log("Se produjo un error al intentar iniciar sesión:", err);
           res.json({ 'resp': err });
       }
-
     },
-
   });
 });
 
