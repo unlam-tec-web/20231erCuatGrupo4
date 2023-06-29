@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="828cf012-5b36-4833-a68f-8a9e3777c5bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-node/datos/productosbk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/20231erCuatGrupo4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-node/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-node/datos/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/datos/productos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-node/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-node/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/crear-producto/crear-producto.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/navbar-productos/navbar-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/navbar-productos/navbar-productos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/registro/registro.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/src/app/tienda-arte/tienda-arte.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-angular/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/app-angular/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +37,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/UNLAM/tw2/tp/20231erCuatGrupo4/api-node/datos",
+    "last_opened_file_path": "C:/Users/axela/OneDrive/Desktop/tw4/20231erCuatGrupo4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,6 +87,7 @@
       <workItem from="1687810778919" duration="1092000" />
       <workItem from="1687811893319" duration="10226000" />
       <workItem from="1687822504890" duration="37754000" />
+      <workItem from="1688044154631" duration="2884000" />
     </task>
     <servers />
   </component>
