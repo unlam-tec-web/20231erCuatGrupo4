@@ -6,7 +6,8 @@ import {Producto} from "../modelos/producto";
 import {ServicioStorage} from "../servicios/servicioStorage";
 import {ServicioProductos} from "../servicios/servicioProductos";
 import { ToastrService } from 'ngx-toastr';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-tienda-arte',
@@ -15,15 +16,24 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class TiendaArteComponent implements OnInit{
+
   productos: Producto[] = [];
+  imagenSeleccionada: Producto;
 
   constructor(private http: HttpClient, private servicioStorage: ServicioStorage,
-              private servicioProductos: ServicioProductos,private toastr: ToastrService) {
+              private servicioProductos: ServicioProductos,private toastr: ToastrService,
+              private modalService: NgbModal) {
     this.loadImages();
   }
 
   ngOnInit(): void {
 
+  }
+
+  @HostListener('window:beforeunload', ['$event'])
+  unloadHandler(event: Event) {
+    this.servicioStorage.eliminarCarritoTemporal();
+    localStorage.removeItem('tokenUsuario');
   }
 
   loadImages(): void {
@@ -67,7 +77,6 @@ export class TiendaArteComponent implements OnInit{
       producto.EnCarrito = carrito.some(item => item.Id == producto.Id);
     }
   }
-
 
 
 }
