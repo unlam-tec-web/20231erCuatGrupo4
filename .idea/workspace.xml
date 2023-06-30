@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="828cf012-5b36-4833-a68f-8a9e3777c5bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/20231erCuatGrupo4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-node/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-node/datos/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-node/datos/productos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-angular/src/assets/imagenes/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/ImagenesDePrueba/9.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +49,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/axela/OneDrive/Desktop/tw4/20231erCuatGrupo4",
+    "last_opened_file_path": "D:/UNLAM/tw2/tp/20231erCuatGrupo4/api-node/datos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\UNLAM\\tw2\\tp\\20231erCuatGrupo4\\app-angular\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,6 +63,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\UNLAM\tw2\tp\20231erCuatGrupo4\api-node\datos" />
       <recent name="D:\UNLAM\tw2\tp\20231erCuatGrupo4\api-node" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UNLAM\tw2\tp\20231erCuatGrupo4\ImagenesDePrueba" />
     </key>
   </component>
   <component name="RunManager">
