@@ -75,7 +75,32 @@ router.post('/generarNuevoProducto',upload.single('imagen'),(req, res) => {
 
 router.post('/grabarCompra', (req, res) => {
 
-    console.log(req.body);
+  console.log(req.body);
+
+  fs.readFile('./datos/productos.json', (err, data) => {
+
+    if (err) {
+      console.error(err);
+      res.error(500).send({'resp': 'Error al Grabar'});
+      return ;
+    }
+
+    const carrito = req.body;
+    const productos = JSON.parse(data);
+
+    const listaFiltrada = lodash.differenceBy(productos, carrito, 'Id');
+
+    console.log(listaFiltrada);
+
+    const jsonString = JSON.stringify(listaFiltrada);
+
+    fs.writeFile('./datos/productos.json', jsonString, (err) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+    });
+  });
 
     res.send({'resp': 'Gracias por su compra'})
 
@@ -106,19 +131,18 @@ router.post('/registrar', (req, res) => {
 
   attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"email",Value:req.body.email}));
 
-  /*attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"name",Value:"Prasad Jayashanka"}));
-  attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"preferred_username",Value:"jay"}));
-  attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"gender",Value:"male"}));
-  attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"birthdate",Value:"1991-06-21"}));
-  attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"address",Value:"CMB"}));
-  attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"phone_number",Value:"+5412614324321"}));
-  */
-
   userPool.signUp(req.body.username, req.body.password, attributeList, null, function(err, result){
     if (err) {
-      console.log(err);
-      res.json(err);
-      res.json({'resp':`${err}`})
+
+      if (err.name === 'InvalidPasswordException') {
+        res.json({'resp':`El password debe tener al menos 8 caracteres, 1 caracter especial y una mayuscula.`})
+      } else if (err.name === 'InvalidParameterException') {
+        res.json({'resp':`Se ingreso un email invalido o falto completar algun dato en el formulario.`})
+      } else if (err.name === 'UsernameExistsException') {
+        res.json({'resp':`Ya existe un usuario registrado con ese Nombre`})
+      } else {
+        res.json({'resp':`Hubo un error con el registro de su usaurio`})
+      }
       return;
     }
     res.json({'resp':'OK'})

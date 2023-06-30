@@ -1,1 +1,50 @@
-[{"Id":"1","Nombre":"Fabricacion en Movimiento","Descripcion":"En el cuadro \"Fabricación en Movimiento\", se representa una escena tridimensional cautivadora en el corazón de una bulliciosa fábrica. El lienzo se llena de vida con una mezcla armoniosa de colores, texturas y la intrincada interacción de vehículos en diferentes etapas de producción.","Clasificacion":"1","Precio":"5000","ImageUrl":"imagenes/1.png"},{"Id":"2","Nombre":"La Reflexión Serena","Descripcion":"En el cautivante cuadro titulado \"La Reflexión Serena\", se presenta una escena aparentemente griega llena de elegancia y serenidad. En el centro del lienzo, una dama de vestimenta clásica se encuentra frente a un exquisito pileton rodeado de un entorno verde exuberante. La composición invita a admirar la armonía entre la figura humana y la naturaleza circundante.","Clasificacion":"2","Precio":"4000","ImageUrl":"imagenes/2.png"},{"Id":"3","Nombre":"El Velo de las Sombras","Descripcion":"En el enigmático cuadro titulado \"El Velo de las Sombras\", se revela una visión intrigante y evocadora del inframundo. La paleta de colores se limita a blanco y negro, creando un ambiente de contraste y misterio. En el centro de la composición, un ser enigmático se presenta, reminiscente de un humano pero imbuido de la esencia del reino de Hades.","Clasificacion":"3","Precio":"3900","ImageUrl":"imagenes/3.png"},{"Id":"4","Nombre":"El Espíritu Indestructible","Descripcion":"el intrigante cuadro titulado \"El Espíritu Indestructible\", se representa una imagen sorprendente y fascinante de Superman en una interpretación única y poderosa. El icónico superhéroe, reconocido por su fuerza y ​​valentía, se presenta en una forma esquelética, pero su espíritu y determinación siguen brillando a través de su traje de superhéroe.","Clasificacion":"4","Precio":"3800","ImageUrl":"imagenes/4.png"},{"Id":"5","Nombre":"El Rocío de la Naturaleza","Descripcion":"En el hermoso cuadro titulado \"El Rocío de la Naturaleza\", se despliega una escena encantadora y vibrante de flores adornadas con rocío matutino. La paleta de colores suaves y frescos evoca una sensación de calma y serenidad, transportando al espectador a un jardín lleno de vida y renovación.","Clasificacion":"5","Precio":"4500","ImageUrl":"imagenes/5.png"},{"Id":"6","Nombre":"El Guardián de los Reinos","Descripcion":"En el intrigante cuadro titulado \"El Guardián de los Reinos\", se presenta una escena impresionante y visualmente impactante en un aspecto 3D. En el centro del lienzo, un ser misterioso y poderoso se revela: un duende guerrero listo para la batalla, sosteniendo un fusil mientras permanece agachado en una postura defensiva.","Clasificacion":"6","Precio":"6000","ImageUrl":"imagenes/6.png"},{"Id":"7","Nombre":"prueba","Descripcion":"descripcion de prueba","Precio":"10000","ImageUrl":"imagenes/1688079109418.jpg"}]
+[
+  {
+    "Id": "1",
+    "Nombre": "Fabricacion en Movimiento",
+    "Descripcion": "En el cuadro \"Fabricación en Movimiento\", se representa una escena tridimensional cautivadora en el corazón de una bulliciosa fábrica. El lienzo se llena de vida con una mezcla armoniosa de colores, texturas y la intrincada interacción de vehículos en diferentes etapas de producción.",
+    "Clasificacion": "1",
+    "Precio": "5000",
+    "ImageUrl": "imagenes/1.png"
+  },
+  {
+    "Id": "2",
+    "Nombre": "La Reflexión Serena",
+    "Descripcion": "En el cautivante cuadro titulado \"La Reflexión Serena\", se presenta una escena aparentemente griega llena de elegancia y serenidad. En el centro del lienzo, una dama de vestimenta clásica se encuentra frente a un exquisito pileton rodeado de un entorno verde exuberante. La composición invita a admirar la armonía entre la figura humana y la naturaleza circundante.",
+    "Clasificacion": "2",
+    "Precio": "4000",
+    "ImageUrl": "imagenes/2.png"
+  },
+  {
+    "Id": "3",
+    "Nombre": "El Velo de las Sombras",
+    "Descripcion": "En el enigmático cuadro titulado \"El Velo de las Sombras\", se revela una visión intrigante y evocadora del inframundo. La paleta de colores se limita a blanco y negro, creando un ambiente de contraste y misterio. En el centro de la composición, un ser enigmático se presenta, reminiscente de un humano pero imbuido de la esencia del reino de Hades.",
+    "Clasificacion": "3",
+    "Precio": "3900",
+    "ImageUrl": "imagenes/3.png"
+  },
+  {
+    "Id": "4",
+    "Nombre": "El Espíritu Indestructible",
+    "Descripcion": "el intrigante cuadro titulado \"El Espíritu Indestructible\", se representa una imagen sorprendente y fascinante de Superman en una interpretación única y poderosa. El icónico superhéroe, reconocido por su fuerza y ​​valentía, se presenta en una forma esquelética, pero su espíritu y determinación siguen brillando a través de su traje de superhéroe.",
+    "Clasificacion": "4",
+    "Precio": "3800",
+    "ImageUrl": "imagenes/4.png"
+  },
+  {
+    "Id": "5",
+    "Nombre": "El Rocío de la Naturaleza",
+    "Descripcion": "En el hermoso cuadro titulado \"El Rocío de la Naturaleza\", se despliega una escena encantadora y vibrante de flores adornadas con rocío matutino. La paleta de colores suaves y frescos evoca una sensación de calma y serenidad, transportando al espectador a un jardín lleno de vida y renovación.",
+    "Clasificacion": "5",
+    "Precio": "4500",
+    "ImageUrl": "imagenes/5.png"
+  },
+  {
+    "Id": "6",
+    "Nombre": "El Guardián de los Reinos",
+    "Descripcion": "En el intrigante cuadro titulado \"El Guardián de los Reinos\", se presenta una escena impresionante y visualmente impactante en un aspecto 3D. En el centro del lienzo, un ser misterioso y poderoso se revela: un duende guerrero listo para la batalla, sosteniendo un fusil mientras permanece agachado en una postura defensiva.",
+    "Clasificacion": "6",
+    "Precio": "6000",
+    "ImageUrl": "imagenes/6.png"
+  }
+]
